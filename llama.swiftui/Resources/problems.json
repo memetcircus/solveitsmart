@@ -1,0 +1,195 @@
+[
+    {
+        "id": "2.2",
+        "body": "Jack was asked to solve the crypto arithmetic question in the figure at an event at his school using only the numbers 0,1,2,3,6,7 and 9. Each letter corresponds to only one number. How does Jack solve the problem by replacing letters with numbers?",
+        "image": null,
+        "figure": "Figure_2.2.png",
+        "techniques": ["Guess and Test"],
+        
+          "figureDescription": "A vertical puzzle shows the words 'rat' and 'cat' added to form 'ruin', using unique digits from 0, 1, 2, 3, 6, 7, and 9."
+        ,
+        "finalAnswer": "r = 1, a = 3, t = 6, u = 0, i = 7, n = 2",
+        "solution": "We identify unique letters:r, a, t, c, u, i, n. Digits available:0, 1, 2, 3, 6, 7, 9. From the units column, t + t must equal n or n + 10; thus t cannot be 0, 2, 7, or 9. We test different values. Try a = 2 → 2 + 2 = 4 (not allowed). Try a = 3 → 3 + 3 = 6 with carry → i = 7. Assume t = 6, a = 3, then r + c must result in a 2-digit number starting with r. Try r = 1 and c = 9, then u = 0. That gives rat = 136 and cat = 936. Adding gives ruin = 1072. All digits are distinct and valid."
+    },
+    {
+        "id": "2.3",
+        "body": "Kelly purchased some ballpoint pens and erasers for a total of 18 dollars. The price of the eraser is 1.5 dollars per piece, and the ballpoint pen is 60 cents per piece. Kelly bought more erasers than pencils. How many erasers and pencils did she purchase?",
+        "image": "image_2.3",
+        "figure": null,
+        "techniques": [
+            "Guess and Test"
+        ],
+        "figureDescription": null,
+        "finalAnswer": "Kelly purchased 5 pens and 10 erasers.",
+        "solution": "Start with 2 pens: 2 × 0.6 = 1.2. Try 6 erasers: 6 × 1.5 = 9.0. Total is 10.2 dollars. Increase to 7 erasers: total = 11.7 dollars. Try 8 to get 13.2 dollars, try 9 to get 14.7 dollars, try 10 to get 16.2 dollars, try 11 to get 17.7 dollars. Still less than 18 dollars. Try 3 pens and 10 erasers to get 16.8 dollars. Try 4 pens to get 17.4 dollars. Try 5 pens: 5 × 0.6 + 10 × 1.5 = 3 + 15 = 18.0 dollars. This matches."
+    },
+    {
+        "id": "2.6",
+        "body": "The perimeter of a rectangular garden is 76 m, and its area is 336 m². If its length is greater than its width, what is the length of the garden?",
+        "image": "image_2.6",
+        "figure": null,
+        "techniques": [
+            "Guess and Test"
+        ],
+        "figureDescription": null,
+        "finalAnswer": "The final answer is 24 m",
+        "solution": "To find the length and width, we try factor pairs of 336 and check if their sum equals half the perimeter (38). Trying 4×84 and 8×42 gives sums that are too high. Trying 16×21 gives 37, close but not exact. Finally, 24×14 yields area 336 and sum 38, which is correct. So, the length is 24 m."
+    },
+    {
+        "id": "3.2",
+        "body": "In the the figure, line AB is parallel to line EF. The measure of the angle ACD is three times the angle CDE. If the measure of the angle FED is 100 degree more than the angle ACD,  what is the measure of the angle FED ?",
+        "image": null,
+        "figure": "Figure_3.2.png",
+        "techniques": [
+            "Use a variable"
+        ],
+        "figureDescription": "Points A to F form two intersecting triangles with parallel bases AB and EF. Angles ACD, CDE, and FED are marked at points C, D, and E.",
+        "finalAnswer": "The measure of the angle FED is 148 degree",
+        
+          "solution": "Let the angle FED be x. Since AB is parallel to EF, the corresponding angles are equal, so angle ACD = x − 100. Also, ACD is three times angle CDE, so let angle CDE = y, which means ACD = 3y and x = 3y + 100. In triangle HDE, the interior angles CDE, GED, and FED sum to 180. Since angle GED = 2y (from triangle angle relationships), the sum becomes: 2y + x = 180. Now we have a system of equations: (1) 2y + x = 180 and (2) x − 3y = 100. Solving these equations by substitution or elimination gives y = 16 and x = 148. Therefore, the measure of angle FED is 148."
+        
+    },
+    {
+        "id": "11.6",
+        "body": "Seven consecutive positive integers, whose sums are odd numbers, are represented using the letters N, R, P, E, I, H, and A. If P + N = E + A = R + H, prove that the letter I cannot be an even number.",
+        "figure": null,
+        "techniques": [
+            "Use indirect reasoning"
+        ],
+        "figureDescription": null,
+        "finalAnswer": "$$I$$ cannot be an even number.",
+        "solution": "Let’s assume $$I$$ is an even number. All letters represent seven consecutive numbers in order: $$P, E, R, I, H, A, N.$$ If $$I$$ is even, then the total sum $$P + E + R + H + A + N$$ is odd. Given that $$P + N = E + A = R + H$$ , we have $$P + E + R + H + A + N = 3(R + H)$$, so $$R + H$$ must be odd. But since $$I$$ is the middle number in the sequence, by properties of consecutive numbers we get $$(R + H)/2 = I$$. Therefore, $$R + H = 2I$$, which is even. This contradicts our earlier finding that $$R + H$$ is odd. Hence, I cannot be an even number."
+    },
+    {
+        "id": "17.4",
+        "body": "The dragon has attacked King George's kingdom. The King promises to reward the warrior who defeats the dragon with one hundred thousand gold coins within 30 days. The White Knight says he will slay the dragon but asks for silver coins instead of gold. He proposes the following condition: \"On the first day, I want one coin. On the second day, two coins. On the third day, four coins, and for the following days, I will take double the number of coins from the previous day.\" Should the King accept the Knight's offer if one gold coin equals one hundred silver coins?",
+        "image": "image_17.4",
+        "figure": null,
+        "figureDescription": null,
+        "techniques": [
+            "Use formula"
+        ],
+        "finalAnswer": "King should not accept the Knight's offer",
+        "solution": "We need to calculate the total amount accumulated in 30 days, starting with one silver on the first day and each subsequent day receiving twice the amount of silver as the previous day. Then, we must determine its matching value in gold and compare the costs. For example, the total on the fifth day is 1 + 2 + 4 + 8 + 16 = 31 = 2^5 - 1. This pattern generalizes: the total payment on the nth day is 2^n - 1 silver coins. So on the 30th day, the total is $$2^30 - 1 = 1,073,741,823$$ silver coins. Since one gold coin is worth 100 silver coins, this equals about 10,737,418 gold coins. The knight’s request far exceeds the king’s original 100,000 gold coin offer. So King should refuse the offer."
+    },
+    {
+        "id": "14.3",
+        "body": "Darsh, Advik, and Indra play a game where only one person loses each round. At the end of each round, the other two players take the number of marbles equal to what the losing player has in their hand. After each player has played three rounds, eight marbles remain, and each player has lost the game once. Given that initially, Darsh has the most marbles, and Indra has the fewest marbles, how many marbles does Advik have at the beginning?",
+        "image": "image_14.3",
+        "figure": null,
+        "techniques": [
+            "Working backwards"
+        ],
+        "figureDescription": null,
+        "finalAnswer": "Advik has 7 marbles at the beginning.",
+        
+        
+        
+          "solution": "We use the working backwards technique and temporarily label the players as O1, O2, and O3, based on the order they lose: O1 loses first, O2 loses second, and O3 loses third. In round 3, O3 loses. Since the game ends with 8 marbles, O1 and O2 must each have 4 marbles, and O3 must have had 16 marbles before losing. In round 2, O2 loses. After that, O1 has 4 marbles and O3 has 16, which means they had 2 and 8 marbles before the round, so O2 must have had 14 marbles. In round 1, O1 loses. After that, O2 has 7 and O3 has 4, so before the round O1 had 13 marbles. At this point, initial counts are: O1 = 13, O2 = 7, O3 = 4. Since the problem states Darsh had the most and Indra the fewest, Darsh is O1, Indra is O3, and Advik is O2. Final answer: Advik started with 7 marbles."
+        
+        
+        
+    },
+    {
+        "id": "10.3",
+        "body": "One of the four siblings ate part of the birthday cake before the celebration. Their mothers talked to the kids one by one to find out who ate the cake, and the children replied as follows:\nMackenzie: \"I didn't eat it.\"\nCynthia: \"Adeline ate the cake.\"\nAdeline: \"Oliver ate it.\"\nOliver: \"Mom, Adeline is lying.\"\nAssuming that only one of the four siblings is lying, which one ate the cake?",
+        "image": "image_10.3",
+        "figure": null,
+        "techniques": [
+            "Use logic"
+        ],
+        "figureDescription": null,
+        "finalAnswer": "Adeline.",
+        "solution": "Only one sibling is lying. If Mackenzie is lying, then she ate the cake, but that contradicts the other truthful statements. If Cynthia is lying, then Adeline didn’t eat it, but Adeline blames Oliver, and Oliver says Adeline is lying, which is a contradiction. If Oliver is lying, then Adeline is truthful and Oliver ate the cake, but that contradicts Cynthia’s claim. If Adeline is lying, then Oliver didn’t eat it. Cynthia says Adeline ate it, Oliver says Adeline is lying, and Mackenzie says she didn’t eat it. All statements align. Therefore, Adeline is the only one lying and she ate the cake."
+    },
+    {
+        "id": "6.4",
+        "body": "During Thanksgiving in 2021, some of every 50 cars coming to the Greenpoint, Maspeth, and Williamsburg junction turn right and turn towards Williamsburg; 10 continue straight to Maspeth, and the rest turn left to go to Greenpoint. Half of the vehicles destined for Maspeth turn right after reaching Maspeth and head toward Ridgewood instead. 20% of cars heading towards Williamsburg ended up in Ridgewood. As a result, 10 out of every 50 vehicles entering the junction went to Ridgewood. Since two hundred and fifty thousand cars entered Ridgewood one day during Thanksgiving, how many vehicles entered Greenpoint?",
+        "image": "image_6.4",
+        "figure": null,
+        "techniques": [
+            "Draw a diagram"
+        ],
+        "figureDescription": null,
+        "finalAnswer": "75,000 vehicles entered Greenpoint.",
+        
+          "solution": "1. Visualize the junction (for every 50 cars):\n\n   [Greenpoint] <--15-- 🚗 --10--> [Maspeth] --5--> [Ridgewood]\n                                     \\\n                                      --25--> [Williamsburg] --5--> [Ridgewood]\n\n2. 10 cars go to Maspeth → half (5 cars) reach Ridgewood.\n3. 25 cars go to Williamsburg → 20% (5 cars) reach Ridgewood.\n4. Total cars reaching Ridgewood: 5 + 5 = 10 out of 50.\n5. 15 out of 50 cars go to Greenpoint → $$\\frac{15}{50} = 0.3 = 30\\%$$.\n6. Given 250,000 total cars:\n   - Greenpoint total = $$250{,}000 \\times \\frac{15}{50} = 75{,}000$$."
+        
+        
+    },
+    {
+        "id": "4.2",
+        "body": "At Pineview primary school, students will participate in a group photo shoot in the school garden with a drone. For this photo shoot, students in the school garden were arranged in a way that one student was placed in the first row, two students were placed in the second row, and three students were placed in the third row; by resuming in this way, they formed an equilateral triangle. If 75 more students were enrolled in this school, all students would be lined up in a square, and the number of students on one side of this square would be five less than on one side of the triangle. How many students are there in total at Pineview primary school?",
+        "image": "image_4.2",
+        "figure": null,
+        "techniques": ["Solve an equation"],
+        "figureDescription": null,
+        "finalAnswer": "There are 325 students at the school.",
+        "solution": "Let n be the number of students on one side of the triangular arrangement. Then the total students in the triangle: T = \\frac{n(n + 1)}{2}. After adding 75 students to this triangle, they form a square with side (n − 5): (n − 5) ^ 2 = \\frac{n(n + 1)}{2} + 75. Multiply both sides: 2(n − 5) ^ 2 = n(n + 1) + 150. Then simplifying: n^2 − 21n − 100 = 0 results in n = 25. Therefore, using n = 25 we have \\frac{25 × 26}{2} = 325."
+    },
+    {
+        "id": "15.4",
+        "body": "Wu, Zhang, and Liu have the same day and month of birth. Zhang's current age is two-thirds of Wu's current age. Four years ago, Liu's age was one-third of Wu's age. Who will be 22 years old on their next birthday?",
+        "image": "image_15.4",
+        "figure": null,
+        "techniques": [
+            "Use cases, Make a table"
+        ],
+        "figureDescription": null,
+        "finalAnswer": "Wu",
+        "solution": "We solve this by making a table and testing three possible cases.\nStep 1: Let Wu’s current age be 3x. Then Zhang’s age is 2x. From the condition 4 years ago: (y − 4) = (3x − 4)/3 ⇒ y = (3x + 8)/3.\n\nStep 2: Represent the ages in a table:\nTime                   |     Wu      | Zhang     | Liu\n----------------------|-------------|--------------|--------------------\n4 years ago       | 3x − 4     | 2x − 4     | (3x + 8)/3 − 4\nCurrent              | 3x            | 2x            | (3x + 8)/3\nOne year later  | 3x + 1     | 2x + 1     | (3x + 8)/3 + 1\n\nStep 3: Test who will be 22 next year: Case 1. Wu: 3x + 1 = 22 ⇒ x = 7 Case 2. Zhang: 2x + 1 = 22 ⇒ x = 10.5  Case 3. Liu: (3x + 8)/3 + 1 = 22 ⇒ x = 55/3 . Only case 1 gives a valid natural number. Therefore,the final answer is Wu will be 22 on the next birthday."
+    },
+    {
+        "id": "17.2",
+        "body": "How many regions would n lines separate a plane at most?",
+        "image": "image_17.2",
+        "figure": null,
+        "techniques": [
+            "Look for a formula"
+        ],
+        "figureDescription": null,
+        "finalAnswer": "The maximum number of regions that n lines can divide the plane into is $$\\frac{n^2 + n + 2}{2}$$.",
+        "solution":"We aim to find the maximum number of regions, L(n), formed by n lines on a plane. Start with small values: L(0)=1, L(1)=2, L(2)=4, L(3)=7, L(4)=11. We observe: $$L(n)=L(n-1)+n$$. Summing gives: $$L(n)=1+1+2+3+\\cdots+n=1+\\frac{n(n+1)}{2}$$. Simplify: $$L(n)=\\frac{n^2+n+2}{2}$$."
+        
+    },
+    {
+        "id": "22.4",
+        "body": "A sprinkler located at point O, which can water an area in the shape of a circle with a radius of 3 meters, is intended to water the rectangular area with corners on the circle shown in the figure. What is the maximum area of this rectangular region in square meters?",
+        "image": null,
+        "figure": "Figure_22.4.png",
+        "techniques": [
+            "Considering extreme cases"
+        ],
+        "figureDescription": "The figure shows a green circle with center O and a radius of 3 meters. Inside the circle, a green rectangle ABCD is inscribed such that all four of its vertices lie on the circumference of the circle.",
+        "finalAnswer": "The maximum area of the rectangle is: $$18 m^2$$",
+        "solution": "We are asked to find the maximum area of a rectangle inscribed in a circle with radius 3 meters.\nFirst, place the center of the circle at the origin and define the rectangle symmetrically about both axes.\nLet the coordinates of a vertex be (x, y).\nThe equation of the circle is: $$x^2 + y^2 = 9$$.\nThe area of the rectangle is: $$A = 2x \\cdot 2y = 4xy$$.\nNow express y in terms of x: $$y = \\sqrt{9 - x^2}$$.\nSubstitute into the area formula: $$A(x) = 4x \\cdot \\sqrt{9 - x^2}$$.\nTo maximize the area, consider the extreme case where $$x = y$$.\nThen: $$x^2 + x^2 = 9 \\Rightarrow 2x^2 = 9 \\Rightarrow x^2 = \\frac{9}{2}$$.\nSo, the area is: $$A = 4x^2 = 4 \\cdot \\frac{9}{2} = 18$$."
+        
+    },
+    {
+        "id": "22.5",
+        "body": "The tree houses 40 vacant nightingale nests. During the migratory season, when 161 nightingales arrive at this tree, what is the maximum number of nightingales that can be present in a single nest?",
+        "image": "image_22.5",
+        "figure": null,
+        "techniques": [
+            "Considering extreme cases"
+        ],
+        "figureDescription": null,
+        "finalAnswer": " There are at most 5 birds could be in one nest.",
+        "solution": "We simplify the problem by analyzing a smaller case. Suppose there are 5 birds and 2 nests. First 2 birds arrive and occupy the 2 nests. Then the third bird enters any of the 2 nests; now one nest has 2 birds. And then, the fourth bird enters the nest with only 1 bird, to avoid crowding; now both nests have 2 birds. Then The fifth bird must enter one of the two nests, making the maximum number of birds in a single nest equal to 3. From using the same reasoning, we generalize the problem. Distribute 161 birds into 40 nests. First, divide 160 birds evenly into 40 nests: 160 / 40 = 4 birds per nest. Then One bird remains (since 161 is not divisible by 40). This bird must go into an existing nest.So that nest will then have 5 birds."
+    },
+    {
+      "id": "7.4",
+      "body": "Joshua builds three towers by stacking nine pieces of 10 cents in his pocket. How many different ways can these towers be created if the total value of the coins in each tower is at least 20 cents?",
+      "image": "image_7.4",
+      "figure": null,
+      "techniques": [
+          "Make a list"
+      ],
+      "figureDescription": null,
+      "finalAnswer": "In 10 different ways.",
+      
+        "solution": "Let's denote each 10-cent coin with an X. Since we need to build 3 towers using 9 coins, and each tower must have at least 2 coins (to ensure at least 20 cents), we use 2 X's per tower initially. That accounts for 6 coins, leaving us with 3 coins to distribute freely among the 3 towers. We now visualize the distribution using bars to separate towers. The problem becomes: how many ways can we insert 3 X's and 2 bars into a line, representing how the extra coins are added to the 3 towers. Each arrangement corresponds to a unique way to construct the towers. The valid arrangements are:\n\n||XXX\n|X|XX\n|XX|X\n|XXX|\nX||XX\nX|X|X\nX|XX|\nXX||X\nXX|X|\nXXX||\n\nThere are 10 such arrangements. Each represents a valid distribution satisfying the constraints. Therefore, the final answer is 10 different ways."
+      
+    }
+]
+ 

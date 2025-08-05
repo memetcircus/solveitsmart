@@ -1,0 +1,11 @@
+# Build folders
+build-*/
+*.xcworkspace
+DerivedData/
+*.xcodeproj/project.xcworkspace/
+
+# Large files
+*.gguf
+
+# llama.cpp (we will not push it)
+llama.cpp/
