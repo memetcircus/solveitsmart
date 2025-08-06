@@ -204,6 +204,7 @@ struct ContentView: View {
                     messages.removeAll()
                     messages.append(Message(text: problem.body, isUser: true))
                     messages.append(Message(text: "", isUser: false))
+                    userPrompt = ""
                 }
                 await gemma.initializeIfNeeded()
                 await gemma.resetChat()
