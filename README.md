@@ -123,6 +123,24 @@ You can test the app without the iBook by tapping any of the links below on iPad
 
 ---
 
+## 🛠 Architecture Overview
+
+### SwiftUI Views:
+- `SplashView.swift`: initial launch screen
+- `ContentView.swift`: main problem/AI interaction interface
+- `BubbleView.swift`: chat-style interface
+
+### AI Backend:
+- `GemmaModel.swift`: manages generation and streaming
+- `libllama.swift`: wraps llama.cpp for iOS
+- `LlamaContext`: handles tokenization, sampling, decoding
+
+### Data Layer:
+- `problems.json`: problem dataset with solutions and techniques
+- `ProblemStore.swift`: loads and fetches problem metadata
+
+---
+
 ## 💡 Local Inference with Gemma 3n
 
 - Model file: `google_gemma-3n-E2B-it-Q4_K_M.gguf`
@@ -162,6 +180,40 @@ make
 ```
 
 This will generate a Metal-optimized static build for iOS.
+
+---
+
+## 📁 Project Structure & Xcode Configuration
+
+After building `llama.cpp`, navigate to:
+
+```bash
+llama.cpp/examples/llama.swiftui/llama.swiftui.xcodeproj
+```
+
+Open this project in Xcode to configure and run the app.
+
+Once opened, place your downloaded .gguf model file inside the models directory:
+
+llama.swiftui/models/google_gemma-3n-E2B-it-Q4_K_M.gguf
+
+⚠️ Note:
+The models/ folder is excluded from version control via .gitignore,
+so you’ll need to manually copy your .gguf file into that folder
+after cloning or switching branches
+
+---
+
+## 🧼 Prompt Engineering
+
+We solved several edge cases:
+
+- Prevent model from re-solving already solved problems
+- Block off-topic user queries with scoped prompts
+- Avoid math rendering bugs caused by `$...$`
+- Prevent technique-switching requests (e.g. “Solve this with another method”)
+- Final answer enforced with:  
+  `Finish with the final answer: \(finalAnswer) and nothing else.`
 
 ---
 
