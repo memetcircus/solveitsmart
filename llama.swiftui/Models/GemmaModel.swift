@@ -199,10 +199,6 @@ class GemmaModel: ObservableObject {
         
         self.selectedTechnique = technique
         
-        let prompt1 = """
-        Solve the problem using the Polya-style technique: \(technique). Problem: \(problem) \(figureDescription != nil ? "Figure: \(figureDescription!)" : "") Provided Solution: \(solution ?? "") Rewrite the reasoning in 3–6 new steps, preserving original logic, numbers, and guesses. Ensure each numbered step starts on a **new line** (e.g.,1. ..,2. ..,etc.). Avoid simplification, invention, repetition, meta phrases. Use only double dollar signs for math expressions (e.g., $$2^5 = 32$$). Never use a single dollar sign "$". Finish with the final answer: \(finalAnswer ?? "") Do not write anything after this final answer. 
-        """
-        
         let prompt = """
         Solve the problem using the Polya-style technique: \(technique). Problem: \(problem) \(figureDescription != nil ? "Figure: \(figureDescription!)" : "") Provided Solution: \(solution ?? "") Rewrite the reasoning clearly in **no more than 8 steps**, preserving all original logic, numbers, and guesses. Do not break down or expand algebraic expressions unless absolutely necessary. Do not explain how to solve equations or do arithmetic. Use new lines for each step (e.g., 1. ..., 2. ...). Use only double dollar signs for math expressions (e.g., $$2^5 = 32$$). Never use a single dollar sign "$". Finish with the final answer: \(finalAnswer ?? "") and nothing else.
         """
